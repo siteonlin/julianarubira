@@ -876,11 +876,6 @@ blockquote {
 .cid-rHd5YUb7p8 .collapsed .navbar-collapse.show .navbar-buttons:last-child {
   margin-bottom: 1rem;
 }
-@media (min-width: 992px) {
-  .cid-rHd5YUb7p8 .collapsed:not(.navbar-short) .navbar-collapse {
-    max-height: 90.625vh;
-  }
-}
 .cid-rHd5YUb7p8 .collapsed button.navbar-toggler {
   display: block;
 }
