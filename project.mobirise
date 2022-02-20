@@ -13,18 +13,18 @@
         "dangerColor": "#444444",
         "mainFont": "Muli",
         "display1Font": "Nunito",
-        "display1Size": 5.37,
+        "display1Size": "4.4",
         "display2Font": "Nunito",
         "display2Size": 3,
         "display5Font": "Nunito",
         "display5Size": 1.75,
         "display7Font": "Muli",
-        "display7Size": 1.1,
+        "display7Size": "1.4",
         "display4Font": "Muli",
         "display4Size": 1,
         "isAnimatedOnScroll": true,
         "isScrollToTopButton": true,
-        "arrowColor": "#444444"
+        "arrowColor": "#ffffff"
       },
       "titlePreset": "Nanny",
       "nameSelectPreset": "nanny",
@@ -50,7 +50,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 22,
+    "uniqCompNum": 23,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png",
     "chatbutton": {
@@ -742,11 +742,7 @@
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)",
-              "@media (max-width: 767px)": {
-                "padding-top": "(@paddingTop * 5px)",
-                "padding-bottom": "(@paddingBottom * 5px)"
-              }
+              "padding-bottom": "(@paddingBottom * 15px)"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
@@ -754,119 +750,52 @@
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
-            "h3": {
-              "font-weight": "900",
-              "width": "fit-content",
-              "position": "relative",
-              "color": "#fff"
-            },
-            ".btn": {
-              "margin": "0.2rem!important"
-            },
-            "@media (max-width: 767px)": {
-              ".mbr-iconfont2": {
-                "margin": "0"
-              },
-              ".wrapper-left": {
-                "text-align": "left"
-              },
-              ".number": {
-                "margin-top": "1rem",
-                "display": "flex",
-                "align-items": "center",
-                "margin-left": "-5px"
-              },
-              ".block": {
-                "margin-top": "2.3rem",
-                "display": "flex",
-                "flex-direction": "column"
-              },
-              ".container-fluid": {
-                "padding": "0 1rem"
-              },
-              ".mbr-section-btn": {
-                "text-align": "left"
-              },
-              "h3": {
-                "margin": "auto",
-                "margin-bottom": "1.4rem",
-                "&:before": {
-                  "position": "absolute",
-                  "content": "''",
-                  "left": "-60px",
-                  "top": "0",
-                  "margin": "auto",
-                  "bottom": "0",
-                  "width": "40px",
-                  "height": "1px",
-                  "background": "currentColor"
-                }
-              }
-            },
-            "@media (min-width: 767px)": {
-              ".mbr-iconfont2": {
-                "margin-left": "1rem"
-              },
-              ".number": {
-                "display": "flex",
-                "align-items": "center"
-              },
-              ".block": {
-                "margin-top": "2.3rem",
-                "display": "inline-flex",
-                "align-items": "center"
-              },
-              ".container-fluid": {
-                "padding": "0 1.5rem"
-              }
-            },
             ".mbr-section-subtitle": {
+              "font-family": "@display2Font",
+              "font-weight": "900",
               "background-color": "lighten(@secondaryColor, 12%)",
-              "padding": "0.4rem 1rem",
-              "border-radius": "15px",
-              "display": "inline-block"
+              "padding": "0 1rem",
+              "border-radius": "5px",
+              "display": "inline-block",
+              "color": "#ffffff"
             },
-            ".mbr-section-title": {
-              "background-color": "lighten(@warningColor, 5%)",
-              "padding": "0.4rem 1rem",
-              "border-radius": "15px",
-              "margin-bottom": "1.3rem",
-              "display": "inline-block"
-            },
-            "h1": {
-              "margin-left": "-4px",
-              "margin-bottom": "0.1rem"
-            },
-            "p": {
+            ".mbr-text": {
               "margin-bottom": "1.3rem"
+            },
+            ".svg-1": {
+              "position": "absolute",
+              "bottom": "0"
+            },
+            ".svg-1 path": {
+              "fill": "@LineColor"
             },
             ".container-fluid": {
               "max-width": "1200px"
             },
-            ".telephone": {
-              "color": "#12265a",
-              "transition": "0.5s"
+            ".mbr-arrow": {
+              "z-index": "1"
             },
-            ".telephone:hover": {
-              "color": "@warningColor"
+            "@media (max-width: 767px)": {
+              "padding-top": "(@paddingTop * 5px)",
+              "padding-bottom": "(@paddingBottom * 5px)",
+              ".container-fluid": {
+                "padding": "0 1rem"
+              },
+              ".mbr-text": {
+                "color": "#343549"
+              }
             },
-            ".icon-btn": {
-              "color": "#fa9db7"
-            },
-            ".mbr-iconfont2": {
-              "font-size": "2.5rem",
-              "color": "@warningColor"
-            },
-            "h4": {
-              "margin-bottom": "0"
+            "@media (min-width: 768px)": {
+              ".container-fluid": {
+                "padding": "0 1.8rem"
+              }
             }
           },
-          "_name": "header3",
-          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"12\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"12\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/o-que-e-furo-de-orelha-humanizado-35-2000x1125.png\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/201169087\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container-fluid align-left\">\n        <div class=\"row\">\n            <div class=\"col-md-10 col-lg-7\">\n              <div class=\"wrapper-left\">\n                  <h3 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".row > div, .mbr-section-title, .row .block\">Colocação de Brincos</h3>\n                  <h3 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\" data-app-selector=\".row > div, .mbr-section-subtitle, .row .block\">Loja On Line</h3>\n              </div>\n                \n                \n                <div class=\"block\">\n                  <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"https://wa.me/5511966160463\" data-app-placeholder=\"Type Text\">Fale Conosco via WhatsApp</a></div>\n                  <div class=\"number\">\n                    <a href=\"#\" class=\"icon-btn\" data-app-placeholder=\"Type Text\"><span mbr-icon class=\"mbrib-mobile  mbr-iconfont2 mbr-iconfont mbr-iconfont-btn\"></span></a>\n                    <h4 class=\"telephone align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if mbr-class=\"{'':showTitle}\" data-app-selector=\".telephone\">11 96616-0463&nbsp;</h4>\n                  </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_anchor": "header3-1",
-          "_isUserblock": true,
+          "_name": "header1",
           "_sourceTheme": "kidsm4",
-          "_cid": "rGsnZCv84A",
+          "_customHTML": "<section group=\"Header\" class=\"header1 kidsm4_header1\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"12\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"12\" condition=\"fullScreen == false\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Arrow\" name=\"showArrow\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<select name=\"alignContent\" title=\"Align Content\">\n\t\t\t<option value=\"1\" selected>Left</option>\n\t\t\t<option value=\"2\">Center</option>\n\t\t\t<option value=\"3\">Right</option>\n\t\t</select>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/o-que-e-furo-de-orelha-humanizado-36-2000x1125.png\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\">\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/201169087\">\n\t\t</fieldset>\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Line\" name=\"LineColor\" value=\"#ffffff\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12 col-lg-12\" mbr-class=\"{'align-center' : alignContent == 2, 'align-right' : alignContent == 3}\">\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-white mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubTitle\" data-app-selector=\".mbr-section-subtitle\">Comece a empreender com aquilo que você ama!</h3>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Colocação de Brincos<br>em bebês<br><br></h1>\n\t\t\t\t<p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"#\" data-app-placeholder=\"Type Text\">Read\n\t\t\t\t\t\tMore</a></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n\t\t<a href=\"#next\">\n\t\t\t<i class=\"mbri-down mbr-iconfont\"></i>\n\t\t</a>\n\t</div>\n\t<svg class=\"svg-1\" data-name=\"Layer 2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1428.75 62.05\">\n\t\t<path class=\"cls-1\" d=\"M-114,132s185,44,434,18c0,0,304-41,551,0,0,0,290.5,57.25,443.75.13v43.69H-114Z\" transform=\"translate(114 -131.78)\"></path>\n\t</svg>\n</section>",
+          "_cid": "sY0qqbaUB7",
+          "_anchor": "header1-m",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -1022,7 +951,7 @@
           },
           "_name": "features1",
           "_sourceTheme": "kidsm4",
-          "_customHTML": "<section class=\"features1 kidsm4_features1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n\t\t<header>Cadrs Background</header>\n\t\t<input type=\"color\" title=\"Card 1\" value=\"#fa9db7\" name=\"CardBg1\">\n\t\t<input type=\"color\" title=\"Card 2\" value=\"#45b3df\" name=\"CardBg2\">\n\t\t<input type=\"color\" title=\"Card 3\" value=\"#ffc85b\" name=\"CardBg3\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/children.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/201169087\n            \">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card card-1 col-12 col-md-8\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner1\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/17-490x276.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\t\tServiços\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Um time Completo de Especialistas<br>no Mundo Materno Infantil.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white\" href=\"#\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<svg class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\" fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" width=\"100%\" height=\"100%\">\n\t\t\t\t\t\t<rect x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card card-2 col-12 col-md-8\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner2\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/18-433x244.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\t\tCursos\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Cursos e Capacitações Profissionais<br>para Pais e Profissionais da Saúde</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white\" href=\"#\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<svg class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\" fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\">\n\t\t\t\t\t\t<rect width=\"100%\" height=\"100%\" x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card card-3 col-12 col-md-8\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner3\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/19-329x185.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">Loja Online</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Compre o primeiro brinquinho de sua Bebê, com quem entende do Assunto.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white\" href=\"#\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<svg fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\">\n\t\t\t\t\t\t<rect x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\" width=\"100%\" height=\"100%\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"features1 kidsm4_features1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n\t\t<header>Cadrs Background</header>\n\t\t<input type=\"color\" title=\"Card 1\" value=\"#fa9db7\" name=\"CardBg1\">\n\t\t<input type=\"color\" title=\"Card 2\" value=\"#45b3df\" name=\"CardBg2\">\n\t\t<input type=\"color\" title=\"Card 3\" value=\"#ffc85b\" name=\"CardBg3\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/children.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/201169087\n            \">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card card-1 col-12 col-md-8\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner1\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/17-490x276.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\t\tServiços\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Um time Completo de Especialistas<br>no Mundo Materno Infantil.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white text-primary\" href=\"index.html#content3-8\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<svg class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\" fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" width=\"100%\" height=\"100%\">\n\t\t\t\t\t\t<rect x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card card-2 col-12 col-md-8\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner2\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/18-433x244.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\t\tCursos\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Cursos e Capacitações Profissionais<br>para Pais e Profissionais da Saúde</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white text-primary\" href=\"index.html#features5-b\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<svg class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\" fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\">\n\t\t\t\t\t\t<rect width=\"100%\" height=\"100%\" x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card card-3 col-12 col-md-8\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-6': cardsAmount == '2',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-inner card-inner3\">\n\t\t\t\t\t<div class=\"card-img pb-4\">\n\t\t\t\t\t\t<div class=\"item-image\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/19-329x185.png\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box text-white\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">Loja Online</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Compre o primeiro brinquinho de sua Bebê, com quem entende do Assunto.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnRemove,-mbrBtnAdd\"><a class=\"btn-underline text-white text-primary\" href=\"page1.html\" data-app-placeholder=\"Type Text\">SAIBA MAIS<span class=\"icon-btn mbri-star mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<svg fill=\"transparent\" stroke-width=\"2\" stroke-dasharray=\"9 5\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" class=\"svg1 wgl-dashes inner-dashed-border animated-dashes\">\n\t\t\t\t\t\t<rect x=\"2px\" y=\"2px\" rx=\"30px\" ry=\"30px\" width=\"100%\" height=\"100%\"></rect>\n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "sXz34x52Ew",
           "_anchor": "features1-1",
           "_protectedParams": [],
