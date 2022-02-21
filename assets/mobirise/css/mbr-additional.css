@@ -10,10 +10,10 @@ body {
 }
 .display-1 {
   font-family: 'Nunito', sans-serif;
-  font-size: 4.4rem;
+  font-size: 3.6rem;
 }
 .display-1 > .mbr-iconfont {
-  font-size: 7.04rem;
+  font-size: 5.76rem;
 }
 .display-2 {
   font-family: 'Nunito', sans-serif;
@@ -51,9 +51,9 @@ body {
 /* 0.65 - min scale variable, may vary */
 @media (max-width: 768px) {
   .display-1 {
-    font-size: 3.52rem;
-    font-size: calc( 2.19rem + (4.4 - 2.19) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (2.19rem + (4.4 - 2.19) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 2.88rem;
+    font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (1.91rem + (3.6 - 1.91) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-2 {
     font-size: 2.4rem;
@@ -1277,6 +1277,7 @@ blockquote {
   border-radius: 5px;
   display: inline-block;
   color: #ffffff;
+  text-align: center;
 }
 .cid-sY0qqbaUB7 .mbr-text {
   margin-bottom: 1.3rem;
@@ -1310,6 +1311,9 @@ blockquote {
   .cid-sY0qqbaUB7 .container-fluid {
     padding: 0 1.8rem;
   }
+}
+.cid-sY0qqbaUB7 .mbr-section-title {
+  text-align: left;
 }
 .cid-sXz4aIrUSg {
   padding-top: 45px;
